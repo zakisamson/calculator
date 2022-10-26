@@ -1,0 +1,29 @@
+.calculator-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 6rem); /*total col that you want & how big is the col*/
+    grid-template-rows: minmax(7rem, auto) repeat(5, 6rem); /*minmax is for the output, so the height is by default 7 rem, or going to expand automatically*/
+}
+
+.span-two{
+    grid-column: span 2; 
+}
+
+.output{
+    grid-column: 1 / -1; /*this is to ensure the output takes the whole 1 row for itself */
+    background-color: rgba(0,0,0, .75);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: .75rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand{
+    font-size: 1.5rem;
+}
+.output .current-operand{
+    font-size: 2rem;
+}
